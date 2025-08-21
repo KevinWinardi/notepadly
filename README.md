@@ -1,69 +1,44 @@
-# React + TypeScript + Vite
+# Notepadly
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Notepadly is a simple web application for managing your notes efficiently. It offers a clean interface with essential features to enhance your note-taking experience.
 
-Currently, two official plugins are available:
+## Key Features
+- User authentication (Login & Register)
+- Single Page Application (SPA) for smooth navigation
+- Light and dark theme support
+- Localization in two languages: English and Indonesian
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Technologies Used
+- React – UI library for building interactive user interfaces
+- React Router DOM – Routing for seamless SPA navigation
+- TypeScript – Strong typing for better developer experience
+- Tailwind CSS – Utility-first CSS framework for styling
+- React i18next – Internationalization for multi-language support
+- SweetAlert2 – Beautiful, responsive alert popups
+- Flag Icons – Visual representation of languages using flag icons
+- Vite – Fast development build tool
+- Firebase Hosting – Secure and scalable hosting solution
 
-## Expanding the ESLint configuration
+## API
+This project uses the public Notes API provided by Dicoding: https://notes-api.dicoding.dev/v1
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## Live Website
+https://notepadly.web.app
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+## How to Run in Local
+1. Clone repository GitHub to local
 ```
-
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+git clone https://github.com/KevinWinardi/notepadly
+```
+2. Change current directory to the project
+```
+cd notepadly
+```
+3. Install dependecies
+```
+npm install
+```
+4. Run project
+```
+npm run dev
 ```
