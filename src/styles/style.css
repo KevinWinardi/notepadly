@@ -1,0 +1,40 @@
+@import "tailwindcss";
+@import "flag-icons/css/flag-icons.min.css";
+
+@custom-variant dark (&:where([data-theme=dark], [data-theme=dark] *));
+
+.btn{
+    @apply cursor-pointer border rounded p-2 transition hover:opacity-75 hover:scale-95;
+}
+
+.btn-primary{
+    @apply text-white bg-gray-700 dark:bg-gray-700;
+}
+
+.btn-secondary{
+    @apply border border-gray-700 text-gray-700 bg-transparent hover:text-white hover:bg-gray-700 dark:text-gray-300;
+}
+
+.btn-danger{
+    @apply text-red-700 bg-transparent hover:text-white hover:bg-red-500 dark:text-red-500
+}
+
+.btn-warning{
+    @apply text-yellow-500 bg-transparent hover:text-white hover:bg-yellow-500 dark:text-yellow-500;
+}
+
+.btn-bottom-right{
+    @apply fixed bottom-8 right-8 w-14 h-14 flex items-center justify-center rounded-xl shadow-sm
+}
+
+h1{
+    @apply font-extrabold text-4xl dark:text-white;
+}
+
+h2{
+    @apply font-bold text-2xl dark:text-white;
+}
+
+h3{
+    @apply font-semibold text-xl dark:text-white;
+}
