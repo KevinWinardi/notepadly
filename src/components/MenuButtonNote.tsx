@@ -86,17 +86,17 @@ export function MenuButtonNote({ note }: MenuButtonNoteProps) {
     }
 
     return (
-        <div className="flex justify-between items-center mb-4 ">
+        <div className="flex justify-between items-center mb-4 gap-4">
             <button onClick={() => navigate('/')} title="Back" className="btn btn-secondary">
                 <i className="fa-solid fa-arrow-left"></i> {t('back')}
             </button>
 
             <div className="flex gap-4">
-                <button title={note.archived ? t('unarchive') : t('archive')} onClick={handleMoveNote} className="btn btn-warning">
-                    <i className="fa-solid fa-box-archive"></i> {note.archived ? t('unarchive') : t('archive')}
+                <button title={note.archived ? t('unarchive') : t('archive')} aria-label={note.archived ? t('unarchive') : t('archive')} onClick={handleMoveNote} className="btn btn-warning w-10 h-10 sm:w-auto sm:h-auto">
+                    <i className="fa-solid fa-box-archive"></i> <span className="hidden sm:inline">{note.archived ? t('unarchive') : t('archive')}</span>
                 </button>
-                <button title={t('delete')} onClick={handleDeleteNote} className="btn btn-danger">
-                    <i className="fa-solid fa-trash"></i> {t('delete')}
+                <button title={t('delete')} onClick={handleDeleteNote} aria-label={t('delete')} className="btn btn-danger w-10 h-10 sm:w-auto sm:h-auto">
+                    <i className="fa-solid fa-trash"></i> <span className="hidden sm:inline">{t('delete')}</span>
                 </button>
             </div>
         </div>

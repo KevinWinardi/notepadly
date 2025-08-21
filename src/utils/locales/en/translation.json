@@ -27,6 +27,7 @@
     "password": "Password",
     "passwordConfirmation": "Password confirmation",
     "passwordMinLength": "Password at least 8 characters.",
+    "showPassword": "Show password",
     "active": "Active",
     "archived": "Archived",
     "submit": "Submit",

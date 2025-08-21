@@ -56,21 +56,31 @@ export function Login({ setIsAuthenticate }: LoginProps) {
             <div className="w-full max-w-sm p-8 border rounded shadow-md bg-white dark:bg-gray-900/50 dark:border-white">
                 <h1 className="text-center">{t('login')}</h1>
                 <form onSubmit={submitHandler} className="mt-16 flex flex-col gap-8">
-                    <input value={email} onChange={emailChangeHandler} type="email" required
+                    <input
+                        type="email"
+                        name="email"
+                        aria-label="email"
+                        value={email}
+                        placeholder="Email"
+                        onChange={emailChangeHandler}
+                        required
                         className="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-400 dark:text-white"
-                        placeholder="Email" />
+                    />
 
                     <div className="relative">
                         <input
                             type={isShowPassword ? 'text' : 'password'}
+                            name="password"
+                            aria-label={t('password')}
                             value={password}
+                            placeholder={t('password')}
                             onChange={passwordChangeHandler}
                             required
-                            placeholder={t('password')}
                             className="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-400 pr-10 dark:text-white"
                         />
                         <button
                             type="button"
+                            aria-label={t('showPassword')}
                             onClick={() => setIsShowPassword(!isShowPassword)}
                             className="absolute inset-y-0 right-0 px-3 flex items-center cursor-pointer text-gray-500 hover:text-gray-700"
                         >

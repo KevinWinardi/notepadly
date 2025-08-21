@@ -65,8 +65,9 @@ export function Home({ isArchivedMode }: HomeProps) {
                     <i className="fa-solid fa-magnifying-glass dark:text-white"></i>
                 </button>
                 <input type="text" name="search" value={rawTitleQuery ?? ''}
-                    onChange={(e) => setSearchParams({ title: e.target.value })}
+                    aria-label={t('searchNotes')}
                     placeholder={t('searchNotes')}
+                    onChange={(e) => setSearchParams({ title: e.target.value })}
                     className="w-full outline-none dark:text-white" />
             </div>
 

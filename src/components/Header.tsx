@@ -52,7 +52,7 @@ export function Header({ isAuthenticate }: HeaderProps) {
                     {
                         isAuthenticate
                             ? (
-                                <Link to={'/profile'} className="flex items-center gap-4 text-white transition-transform hover:scale-95">
+                                <Link to={'/profile'} aria-label={t('profile')} className="flex items-center gap-4 text-white transition-transform hover:scale-95">
                                     <i className="fa-solid fa-circle-user text-xl"></i>
                                     {t('profile')}
                                 </Link>
@@ -66,15 +66,17 @@ export function Header({ isAuthenticate }: HeaderProps) {
                 </div>
 
                 <div className="w-full flex justify-between gap-8 p-2 border-t border-white">
-                    <button title={t('changeTheme')} onClick={() => setTheme(theme === 'light' ? 'dark' : 'light')}>
+                    <button title={t('changeTheme')} aria-label={t('changeTheme')} onClick={() => setTheme(theme === 'light' ? 'dark' : 'light')}>
                         <i className={`fa-solid ${theme === 'light' ? 'fa-sun' : 'fa-moon'} p-2 text-xl text-white transition-transform hover:scale-90 cursor-pointer`}></i>
                     </button>
 
                     <div>
-                        <i className={`fi fi-${language == 'en' ? 'gb' : 'id'} mr-2`}></i>
-                        <select title={t('changeLanguage')} value={language} onChange={() => setLanguage(language == 'en' ? 'id' : 'en')} className="p-2 border rounded cursor-pointer text-white transition-opacity hover:opacity-75 ">
+                        <i className={`fi fi-${language == 'en' ? 'us' : 'id'} mr-2`}></i>
+                        <select title={t('changeLanguage')} aria-label={t('changeLanguage')} value={language}
+                            onChange={() => setLanguage(language == 'en' ? 'id' : 'en')}
+                            className="p-2 border rounded cursor-pointer text-white transition-opacity hover:opacity-75 ">
                             <option value="en" className="text-black bg-white dark:text-white dark:bg-gray-700">
-                                English
+                                English (US)
                             </option>
                             <option value="id" className="text-black bg-white dark:text-white dark:bg-gray-700">
                                 Indonesia
@@ -86,19 +88,23 @@ export function Header({ isAuthenticate }: HeaderProps) {
 
             {/* Desktop */}
             <div className="hidden sm:flex gap-4 ml-auto">
-                <button title={t('changeTheme')} onClick={() => setTheme(theme === 'light' ? 'dark' : 'light')}>
+                <button title={t('changeTheme')} aria-label={t('changeTheme')} onClick={() => setTheme(theme === 'light' ? 'dark' : 'light')}>
                     <i className={`fa-solid ${theme === 'light' ? 'fa-sun' : 'fa-moon'} p-2 text-xl text-white transition-transform hover:scale-90 cursor-pointer`}></i>
                 </button>
 
-                <i className={`fi fi-${language == 'en' ? 'gb' : 'id'}`}></i>
-                <select title={t('changeLanguage')} value={language} onChange={() => setLanguage(language == 'en' ? 'id' : 'en')} className="p-2 border rounded cursor-pointer text-white transition-opacity hover:opacity-75 ">
-                    <option value="en" className="text-black bg-white dark:text-white dark:bg-gray-700">
-                        English
-                    </option>
-                    <option value="id" className="text-black bg-white dark:text-white dark:bg-gray-700">
-                        Indonesia
-                    </option>
-                </select>
+                <div>
+                    <i className={`fi fi-${language == 'en' ? 'us' : 'id'} mr-4`}></i>
+                    <select title={t('changeLanguage')} aria-label={t('changeLanguage')} value={language}
+                        onChange={() => setLanguage(language == 'en' ? 'id' : 'en')}
+                        className="p-2 border rounded cursor-pointer text-white transition-opacity hover:opacity-75 ">
+                        <option value="en" className="text-black bg-white dark:text-white dark:bg-gray-700">
+                            English (US)
+                        </option>
+                        <option value="id" className="text-black bg-white dark:text-white dark:bg-gray-700">
+                            Indonesia
+                        </option>
+                    </select>
+                </div>
 
                 {
                     isAuthenticate

@@ -4,7 +4,7 @@
 @custom-variant dark (&:where([data-theme=dark], [data-theme=dark] *));
 
 .btn{
-    @apply cursor-pointer border rounded p-2 transition hover:opacity-75 hover:scale-95;
+    @apply cursor-pointer border rounded px-3 py-2 transition hover:opacity-75 hover:scale-95;
 }
 
 .btn-primary{

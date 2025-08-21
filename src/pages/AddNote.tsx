@@ -75,11 +75,13 @@ export function AddNote() {
                 <div className="min-h-[40dvh] mt-4 border rounded p-4 dark:border-white">
                     <textarea ref={titleRef} rows={1} value={title}
                         onInput={(e: React.ChangeEvent<HTMLTextAreaElement>) => setTitle(e.target.value)}
-                        placeholder={t('titleNote')} className="w-full mb-2 overflow-y-hidden text-4xl font-extrabold outline-none resize-none dark:text-white">
+                        placeholder={t('titleNote')} aria-label={t('titleNote')}
+                        className="w-full mb-2 overflow-y-hidden text-4xl font-extrabold outline-none resize-none dark:text-white">
                     </textarea>
                     <hr className="dark:text-white" />
                     <textarea ref={bodyRef} value={body} onInput={(e: React.ChangeEvent<HTMLTextAreaElement>) => setBody(e.target.value)}
-                        placeholder={t('bodyNote')} className="w-full mt-4 overflow-y-hidden outline-none resize-none dark:text-white">
+                        placeholder={t('bodyNote')} aria-label={t('bodyNote')}
+                        className="w-full mt-4 overflow-y-hidden outline-none resize-none dark:text-white">
                     </textarea>
                 </div>
 

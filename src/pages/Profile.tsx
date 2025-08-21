@@ -71,12 +71,12 @@ export function Profile({ setIsAuthenticate }: ProfileProps) {
 
     return (
         <div className="h-[75dvh]">
-            <button className="btn btn-secondary self-start" onClick={() => navigate(-1)}>
+            <button onClick={() => navigate(-1)} title="Back" className="btn btn-secondary">
                 <i className="fa-solid fa-arrow-left"></i> {t('back')}
             </button>
 
             <div className="h-full flex flex-col justify-center items-center gap-8">
-                <div className="w-3/4 max-w-sm flex flex-col justify-center items-center p-4 border rounded-2xl shadow-md bg-white dark:bg-gray-900/50 dark:border-white">
+                <div className="w-full max-w-sm flex flex-col justify-center items-center p-4 border rounded-2xl shadow-md bg-white dark:bg-gray-900/50 dark:border-white">
                     <h1 className="text-center mb-8">{t('profile')}</h1>
                     <img src={`https://ui-avatars.com/api/?name=${profile?.name.slice(0, 1)}`} alt="Profile? image"
                         className="mb-4 border rounded-full"

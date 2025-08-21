@@ -27,6 +27,7 @@
     "password": "Kata sandi",
     "passwordConfirmation": "Konfirmasi kata sandi",
     "passwordMinLength": "Kata sandi minimal 8 karakter.",
+    "showPassword": "Lihat kata sandi",
     "active": "Aktif",
     "archived": "Arsip",
     "submit": "Kirim",
