@@ -95,7 +95,7 @@ export function Home({ isArchivedMode }: HomeProps) {
                 )
             }
 
-            <button title={t('addNote')} onClick={() => navigate('/add-note')} className="btn btn-bottom-right btn-primary">
+            <button title={t('addNote')} aria-label={t('addNote')} onClick={() => navigate('/add-note')} className="btn btn-bottom-right btn-primary">
                 <i className="fa-solid fa-add"></i>
             </button>
         </>

@@ -85,7 +85,7 @@ export function AddNote() {
                     </textarea>
                 </div>
 
-                <button title={t('addNote')} className="btn btn-primary btn-bottom-right" onClick={handleSaveNote}>
+                <button title={t('addNote')} aria-label={t('addNote')} className="btn btn-primary btn-bottom-right" onClick={handleSaveNote}>
                     <i className={`fa-solid fa-check`}></i>
                 </button>
             </div>
